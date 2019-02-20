@@ -15,7 +15,7 @@ class AlbumsController extends Controller
     }
 
 
-    public function stor(Request $request){
+    public function store(Request $request){
         return;
     }
 }
