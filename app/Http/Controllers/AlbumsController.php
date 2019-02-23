@@ -8,6 +8,7 @@ use App\Album;
 class AlbumsController extends Controller
 {
     public function index(){
+      // Get albums to show 
       $albums = Album::all();
       return view('albums.index')->with('albums', $albums);
     }
@@ -44,7 +45,7 @@ class AlbumsController extends Controller
         $album->cover_image = $filenameToStore;
   
         $album->save();
-  
+          // redirect to create albums
         return redirect('/albums')->with('success', 'Album Created');
     }
 }
