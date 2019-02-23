@@ -2,5 +2,5 @@
 
 
 @section('content')
-<h3>Index </h3>
+<h3>Albums </h3>
 @endsection
