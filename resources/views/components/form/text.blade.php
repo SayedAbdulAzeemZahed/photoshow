@@ -1,6 +1,4 @@
-<lable>
-
-{{Form::lable($name)}}
-{{Form::text($name, $value, $attributes)}}
-
-</lable>
+<label>
+  {{Form::label($name)}}
+  {{Form::text($name, $value, $attributes)}}
+</label>
