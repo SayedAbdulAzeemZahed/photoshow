@@ -19,7 +19,7 @@ class AlbumsController extends Controller
     public function store(Request $request){
       $this->validate($request, [
         'name' => 'required',
-        'cover_image' => 'image|max:3999'
+        'cover_image' => 'image|max:9999'
       ]);
 
       // Get filename with extension
@@ -46,5 +46,9 @@ class AlbumsController extends Controller
         $album->save();
          
         return redirect('/albums')->with('success', 'Album Created');
+    }
+    public function show($id){
+      $album = Album::with('Photos')->find($id);
+      return view('albums.show')->with('album', $album);
     }
 }
