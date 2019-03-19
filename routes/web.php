@@ -24,3 +24,7 @@ Route::get('/photos/{id}', 'PhotosController@show');
 Route::delete('/photos/{id}', 'PhotosController@destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/crop-image', 'ImageController@index');
+
+Route::post('/crop-image', ['as'=>'upload.image','uses'=>'ImageController@uploadImage']);

@@ -15,7 +15,7 @@ class PhotosController extends Controller
     public function store(Request $request){
       $this->validate($request, [
         'title' => 'required',
-        'photo' => 'image|max:1999'
+        'photo' => 'image|max:9999'
       ]);
 
       // Get filename with extension

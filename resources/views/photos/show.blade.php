@@ -12,5 +12,6 @@
     {{Form::submit('Delete Photo', ['class' => 'button alert'])}}
   {!!Form::close()!!}
   <hr>
-  <small>Size: {{$photo->size}}</small>
+  
+  Size: {{$photo->size}}
 @endsection
